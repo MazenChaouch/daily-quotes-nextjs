@@ -27,10 +27,6 @@ export const saveFavorite = async (quote: Quote) => {
   }
 };
 
-export const getFavorites = async () => {
-  return favorites;
-};
-
 export const deleteFavorite = async (id: Date) => {
   const index = favorites.findIndex(
     (quote) => quote[0].id?.getTime() == id?.getTime(),

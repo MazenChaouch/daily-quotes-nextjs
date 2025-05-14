@@ -8,8 +8,9 @@ import {
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import { Quote } from "@/types";
-import { useState, useTransition } from "react";
+import { useState, useTransition, useEffect } from "react";
 import { deleteFavorite } from "@/actions/quote";
+import axios from "axios";
 
 interface Props {
   favorites: Quote[];
@@ -35,6 +36,18 @@ export const FavoriteCard = ({ favorites, setFavorites }: Props) => {
       }
     });
   };
+
+  useEffect(() => {
+    const hello = async () => {
+      try {
+        const res = await axios.get("/api/hello");
+        console.log(res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    hello();
+  }, []);
   return (
     <Card className="w-[600px]">
       <CardHeader>

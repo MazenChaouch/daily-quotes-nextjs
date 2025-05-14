@@ -16,6 +16,12 @@ export const Navbar = () => {
       >
         Favorites
       </Link>
+      <Link
+        href={"/about"}
+        className="text-white text-lg font-semibold hover:underline transition duration-300"
+      >
+        About
+      </Link>
     </div>
   );
 };
