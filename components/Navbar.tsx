@@ -10,7 +10,7 @@ export const Navbar = () => {
         Home
       </Link>
       <Link
-        href={""}
+        href={"/favorites"}
         className="text-white text-lg font-semibold hover:underline transition duration-300"
       >
         Favorites
